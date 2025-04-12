@@ -12,7 +12,7 @@ public class Promotion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private Integer nbPlace;
+    private Integer nbplace;
     
     @Column(nullable = false, precision = 15, scale = 2)
     private BigDecimal pourcentage;
@@ -35,8 +35,8 @@ public class Promotion {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
-    public Integer getNbPlace() { return nbPlace; }
-    public void setNbPlace(Integer nbPlace) { this.nbPlace = nbPlace; }
+    public Integer getNbplace() { return nbplace; }
+    public void setNbplace(Integer nbPlace) { this.nbplace = nbPlace; }
     
     public BigDecimal getPourcentage() { return pourcentage; }
     public void setPourcentage(BigDecimal pourcentage) { this.pourcentage = pourcentage; }
