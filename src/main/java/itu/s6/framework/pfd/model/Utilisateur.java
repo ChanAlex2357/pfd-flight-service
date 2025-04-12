@@ -21,7 +21,7 @@ public class Utilisateur {
     private String cin;
     
     @ManyToOne
-    @JoinColumn(name = "idRole", nullable = false)
+    @JoinColumn(name = "idrole", nullable = false)
     private RoleUtilisateur role;
 
     // Getters and Setters

@@ -3,7 +3,7 @@ package itu.s6.framework.pfd.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ContactUtilisateur")
+@Table(name = "contactutilisateur")
 public class ContactUtilisateur {
     
     @Id
@@ -14,7 +14,7 @@ public class ContactUtilisateur {
     private String numero;
     
     @ManyToOne
-    @JoinColumn(name = "idUtilisateur", nullable = false)
+    @JoinColumn(name = "idutilisateur", nullable = false)
     private Utilisateur utilisateur;
 
     // Getters and Setters

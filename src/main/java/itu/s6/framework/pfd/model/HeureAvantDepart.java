@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-@Table(name = "HeureAvantDepart")
+@Table(name = "heureavantdepart")
 public class HeureAvantDepart {
     
     @Id
@@ -13,7 +13,7 @@ public class HeureAvantDepart {
     private Long id;
     
     @Column(nullable = false)
-    private LocalDate dateConfig;
+    private LocalDate dateconfig;
     
     @Column(nullable = false)
     private LocalTime heure;
@@ -22,8 +22,8 @@ public class HeureAvantDepart {
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
-    public LocalDate getDateConfig() { return dateConfig; }
-    public void setDateConfig(LocalDate dateConfig) { this.dateConfig = dateConfig; }
+    public LocalDate getDateconfig() { return dateconfig; }
+    public void setDateconfig(LocalDate dateConfig) { this.dateconfig = dateConfig; }
     
     public LocalTime getHeure() { return heure; }
     public void setHeure(LocalTime heure) { this.heure = heure; }

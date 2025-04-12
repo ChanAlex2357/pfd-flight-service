@@ -2,7 +2,7 @@ package itu.s6.framework.pfd.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "roleUtilisateur")
+@Table(name = "roleutilisateur")
 public class RoleUtilisateur {
     
     @Id

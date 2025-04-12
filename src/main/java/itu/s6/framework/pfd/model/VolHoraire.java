@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "VolHoraire")
+@Table(name = "volhoraire")
 public class VolHoraire {
     
     @Id
@@ -13,32 +13,32 @@ public class VolHoraire {
     private Long id;
     
     @Column(precision = 15, scale = 2)
-    private BigDecimal dureeVol;
+    private BigDecimal dureevol;
     
-    private LocalDate dateDepart;
+    private LocalDate datedepart;
     
-    private LocalDate dateArrivee;
+    private LocalDate datearrivee;
     
-    private LocalTime heureArrive;
+    private LocalTime heurearrive;
     
-    private LocalTime heureDepart;
+    private LocalTime heuredepart;
 
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
-    public BigDecimal getDureeVol() { return dureeVol; }
-    public void setDureeVol(BigDecimal dureeVol) { this.dureeVol = dureeVol; }
+    public BigDecimal getDureevol() { return dureevol; }
+    public void setDureevol(BigDecimal dureeVol) { this.dureevol = dureeVol; }
     
-    public LocalDate getDateDepart() { return dateDepart; }
-    public void setDateDepart(LocalDate dateDepart) { this.dateDepart = dateDepart; }
+    public LocalDate getDatedepart() { return datedepart; }
+    public void setDatedepart(LocalDate dateDepart) { this.datedepart = dateDepart; }
     
-    public LocalDate getDateArrivee() { return dateArrivee; }
-    public void setDateArrivee(LocalDate dateArrivee) { this.dateArrivee = dateArrivee; }
+    public LocalDate getDatearrivee() { return datearrivee; }
+    public void setDatearrivee(LocalDate dateArrivee) { this.datearrivee = dateArrivee; }
     
-    public LocalTime getHeureArrive() { return heureArrive; }
-    public void setHeureArrive(LocalTime heureArrive) { this.heureArrive = heureArrive; }
+    public LocalTime getHeurearrive() { return heurearrive; }
+    public void setHeurearrive(LocalTime heureArrive) { this.heurearrive = heureArrive; }
     
-    public LocalTime getHeureDepart() { return heureDepart; }
-    public void setHeureDepart(LocalTime heureDepart) { this.heureDepart = heureDepart; }
+    public LocalTime getHeuredepart() { return heuredepart; }
+    public void setHeuredepart(LocalTime heureDepart) { this.heuredepart = heureDepart; }
 }

@@ -1,15 +1,90 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Détails de la Réservation</title>
+    <meta charset="UTF-8"></meta>
+    <title>Fiche de Réservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .fiche {
+            width: 80%;
+            margin: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background: #f0f0f0;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>Reservation</h2>
-
-    <h2>Détails de la Réservation</h2>
-    <!-- <p>Réservation ID: <span th:text="${reservation.id}"></span></p> -->
-    <!-- <p>Nom du client: <span th:text="${reservation.nomClient}"></span></p> -->
-    <!-- <p>Date de réservation: <span th:text="${reservation.dateReservation}"></span></p> -->
-    <!-- <p>Détails: <span th:text="${reservation.details}"></span></p> -->
+    <div class="fiche">
+        <h2>Fiche de Réservation</h2>
+        <h3>Informations Générales</h3>
+        <table>
+            <tr>
+                <th>ID Réservation</th>
+                <td th:text="${reservation.id}">1</td>
+            </tr>
+            <tr>
+                <th>Date de Réservation</th>
+                <td th:text="${reservation.datereservation}">2025-04-15</td>
+            </tr>
+            <tr>
+                <th>Prix Total</th>
+                <td th:text="${reservation.pirxtotal}">150.00</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <!-- Supposons que l'entité Etat possède un attribut 'val' -->
+                <td th:text="${reservation.etat.val}">Confirmée</td>
+            </tr>
+            <tr>
+                <th>Vol</th>
+                <!-- Vous pouvez afficher ici davantage d'informations sur le vol -->
+                <td th:text="${reservation.vol.id}">100</td>
+            </tr>
+            <tr>
+                <th>Utilisateur</th>
+                <!-- Ici, on affiche par exemple le login ou un autre identifiant de l'utilisateur -->
+                <td th:text="${reservation.utilisateur.login}">jdoe</td>
+            </tr>
+        </table>
+        
+        <h3>Détails de la Réservation</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Prix</th>
+                    <th>Promotion</th>
+                    <th>Siège</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Pour chaque détail, affichage de ses informations -->
+                <tr th:each="detail : ${details}">
+                    <td th:text="${detail.id}">1</td>
+                    <td th:text="${detail.prix}">50.00</td>
+                    <!-- On vérifie si la promotion est renseignée -->
+                    <td th:text="${detail.promotion != null ? detail.promotion.pourcentage : 'Aucune promotion'}">10%</td>
+                    <!-- Supposons que l'entité Siege possède une propriété 'numero' -->
+                    <td th:text="${detail.siege.numero}">12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

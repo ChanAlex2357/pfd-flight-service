@@ -3,7 +3,7 @@ package itu.s6.framework.pfd.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "ModelAvion")
+@Table(name = "modelavion")
 public class ModelAvion {
     
     @Id

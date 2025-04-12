@@ -21,7 +21,7 @@ public class PdfController {
     private PdfService pdfService;
 
     @GetMapping("/pdf/{id}")
-    public ResponseEntity<?> getReservationPdf(@PathVariable("id") String id) {
+    public ResponseEntity<?> getReservationPdf(@PathVariable("id") Long id) {
         System.out.println(
              "HELLO"
         );

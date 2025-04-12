@@ -13,32 +13,32 @@ public class Reservation {
     private Long id;
     
     @Column(nullable = false)
-    private LocalDate dateReservation;
+    private LocalDate datereservation;
     
     @Column(precision = 15, scale = 2)
-    private BigDecimal pirxTotal;
+    private BigDecimal pirxtotal;
     
     @ManyToOne
-    @JoinColumn(name = "idEtat", nullable = false)
+    @JoinColumn(name = "idetat", nullable = false)
     private Etat etat;
     
     @ManyToOne
-    @JoinColumn(name = "idVol", nullable = false)
+    @JoinColumn(name = "idvol", nullable = false)
     private Vol vol;
     
     @ManyToOne
-    @JoinColumn(name = "idUtilisateur", nullable = false)
+    @JoinColumn(name = "idutilisateur", nullable = false)
     private Utilisateur utilisateur;
 
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
-    public LocalDate getDateReservation() { return dateReservation; }
-    public void setDateReservation(LocalDate dateReservation) { this.dateReservation = dateReservation; }
+    public LocalDate getDatereservation() { return datereservation; }
+    public void setDatereservation(LocalDate dateReservation) { this.datereservation = dateReservation; }
     
-    public BigDecimal getPirxTotal() { return pirxTotal; }
-    public void setPirxTotal(BigDecimal pirxTotal) { this.pirxTotal = pirxTotal; }
+    public BigDecimal getPirxtotal() { return pirxtotal; }
+    public void setPirxtotal(BigDecimal pirxTotal) { this.pirxtotal = pirxTotal; }
     
     public Etat getEtat() { return etat; }
     public void setEtat(Etat etat) { this.etat = etat; }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "ReservationDetails")
+@Table(name = "reservationdetails")
 public class ReservationDetails {
     
     @Id
@@ -15,15 +15,15 @@ public class ReservationDetails {
     private BigDecimal prix;
     
     @ManyToOne
-    @JoinColumn(name = "idPromotion")
+    @JoinColumn(name = "idpromotion")
     private Promotion promotion;
     
     @ManyToOne
-    @JoinColumn(name = "idSiege", nullable = false)
+    @JoinColumn(name = "idsiege", nullable = false)
     private Siege siege;
     
     @ManyToOne
-    @JoinColumn(name = "idReservation", nullable = false)
+    @JoinColumn(name = "idreservation", nullable = false )
     private Reservation reservation;
 
     // Getters and Setters

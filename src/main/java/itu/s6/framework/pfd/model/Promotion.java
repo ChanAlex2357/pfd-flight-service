@@ -18,17 +18,17 @@ public class Promotion {
     private BigDecimal pourcentage;
     
     @Column(nullable = false)
-    private LocalDate dateDebut;
+    private LocalDate datedebut;
     
     @Column(nullable = false)
-    private LocalDate dateFin;
+    private LocalDate datefin;
     
     @ManyToOne
-    @JoinColumn(name = "idTypeSiege", nullable = false)
+    @JoinColumn(name = "idtypesiege", nullable = false)
     private TypeSiege typeSiege;
     
     @ManyToOne
-    @JoinColumn(name = "idVol", nullable = false)
+    @JoinColumn(name = "idvol", nullable = false)
     private Vol vol;
 
     // Getters and Setters
@@ -41,11 +41,11 @@ public class Promotion {
     public BigDecimal getPourcentage() { return pourcentage; }
     public void setPourcentage(BigDecimal pourcentage) { this.pourcentage = pourcentage; }
     
-    public LocalDate getDateDebut() { return dateDebut; }
-    public void setDateDebut(LocalDate dateDebut) { this.dateDebut = dateDebut; }
+    public LocalDate getDatedebut() { return datedebut; }
+    public void setDatedebut(LocalDate dateDebut) { this.datedebut = dateDebut; }
     
-    public LocalDate getDateFin() { return dateFin; }
-    public void setDateFin(LocalDate dateFin) { this.dateFin = dateFin; }
+    public LocalDate getDatefin() { return datefin; }
+    public void setDatefin(LocalDate dateFin) { this.datefin = dateFin; }
     
     public TypeSiege getTypeSiege() { return typeSiege; }
     public void setTypeSiege(TypeSiege typeSiege) { this.typeSiege = typeSiege; }

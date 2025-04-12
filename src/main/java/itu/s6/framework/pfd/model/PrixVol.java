@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "PrixVol")
+@Table(name = "prixvol")
 public class PrixVol {
     
     @Id
@@ -15,11 +15,11 @@ public class PrixVol {
     private BigDecimal pu;
     
     @ManyToOne
-    @JoinColumn(name = "idTypeSiege", nullable = false)
+    @JoinColumn(name = "idyypesiege", nullable = false)
     private TypeSiege typeSiege;
     
     @ManyToOne
-    @JoinColumn(name = "idVol", nullable = false)
+    @JoinColumn(name = "idvol", nullable = false)
     private Vol vol;
 
     // Getters and Setters

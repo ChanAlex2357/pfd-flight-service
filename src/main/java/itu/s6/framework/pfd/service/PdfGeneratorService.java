@@ -13,7 +13,6 @@ import itu.s6.framework.pfd.model.Reservation;
 
 @Service
 public class PdfGeneratorService {
-
     @Autowired
     private TemplateEngine templateEngine;
 
@@ -21,6 +20,8 @@ public class PdfGeneratorService {
         // 1. Créer un contexte Thymeleaf avec les données
         Context context = new Context();
         context.setVariable("reservation", reservation);
+
+        System.out.println(reservation);
 
         // 2. Générer le HTML depuis le template
         String htmlContent = templateEngine.process("reservation-pdf", context);
@@ -35,11 +36,5 @@ public class PdfGeneratorService {
         builder.run();
 
         return outputStream.toByteArray();
-    }
-
-    public byte[] generatePdf(String idReservation) throws Exception {
-        Reservation res = new Reservation();            // Recuperation de la reservation associer a l'id
-
-        return this.generatePdf(res);
     }
 }

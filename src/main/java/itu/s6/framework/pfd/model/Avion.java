@@ -10,20 +10,20 @@ public class Avion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private Integer nbPlace;
+    private Integer nbplace;
     
     private String libelle;
     
     @ManyToOne
-    @JoinColumn(name = "idModel", nullable = false)
+    @JoinColumn(name = "idmodel", nullable = false)
     private ModelAvion model;
 
     // Getters and Setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     
-    public Integer getNbPlace() { return nbPlace; }
-    public void setNbPlace(Integer nbPlace) { this.nbPlace = nbPlace; }
+    public Integer getNbplace() { return nbplace; }
+    public void setNbplace(Integer nbPlace) { this.nbplace = nbPlace; }
     
     public String getLibelle() { return libelle; }
     public void setLibelle(String libelle) { this.libelle = libelle; }

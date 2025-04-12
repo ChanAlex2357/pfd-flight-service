@@ -12,24 +12,24 @@ public class Vol {
     private Long id;
     
     @ManyToOne
-    @JoinColumn(name = "idHoraire", nullable = false)
+    @JoinColumn(name = "idhoraire", nullable = false)
     private VolHoraire horaire;
     
     @ManyToOne
-    @JoinColumn(name = "idHeureAvantDepart", nullable = false)
+    @JoinColumn(name = "idheureavantdepart", nullable = false)
     private HeureAvantDepart heureAvantDepart;
     
     @ManyToOne
-    @JoinColumn(name = "idAvion", nullable = false)
+    @JoinColumn(name = "idavion", nullable = false)
     private Avion avion;
     
     // Ces colonnes correspondent aux clés étrangères sur Ville
     @ManyToOne
-    @JoinColumn(name = "idVilleDepart", nullable = false)
+    @JoinColumn(name = "idvilledepart", nullable = false)
     private Ville villeDepart;
     
     @ManyToOne
-    @JoinColumn(name = "idVilleArrivee", nullable = false)
+    @JoinColumn(name = "idvillearrivee", nullable = false)
     private Ville villeArrivee;
     
     // Getters and Setters

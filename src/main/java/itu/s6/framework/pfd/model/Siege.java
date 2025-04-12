@@ -13,11 +13,11 @@ public class Siege {
     private Integer numero;
     
     @ManyToOne
-    @JoinColumn(name = "idAvion", nullable = false)
+    @JoinColumn(name = "idavion", nullable = false)
     private Avion avion;
     
     @ManyToOne
-    @JoinColumn(name = "idTypeSiege", nullable = false)
+    @JoinColumn(name = "idtypesiege", nullable = false)
     private TypeSiege typeSiege;
 
     // Getters and Setters
