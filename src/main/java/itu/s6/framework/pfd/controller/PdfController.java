@@ -36,7 +36,7 @@ public class PdfController {
             
         } catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.badRequest().body("Erreur generation de pdf pour la reservation : "+id);
+            return ResponseEntity.badRequest().body("Erreur generation de pdf pour la reservation : "+id+"\n"+e.getMessage());
         }
         
     }
