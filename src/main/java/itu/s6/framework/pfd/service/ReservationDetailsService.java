@@ -10,10 +10,10 @@ import java.util.Optional;
 
 @Service
 public class  ReservationDetailsService {
-
+    
+    @Autowired
     private final ReservationDetailsRepository repository;
 
-    @Autowired
     public ReservationDetailsService(ReservationDetailsRepository repository) {
         this.repository = repository;
     }
