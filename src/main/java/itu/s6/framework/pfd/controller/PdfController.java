@@ -20,7 +20,7 @@ public class PdfController {
     @Autowired
     private PdfService pdfService;
 
-    @GetMapping("/pdf/{id}")
+    @GetMapping("/{id}/pdf")
     public ResponseEntity<?> getReservationPdf(@PathVariable("id") Long id) {
         try {
             byte[] pdfBytes = pdfService.generatePdf(id);
